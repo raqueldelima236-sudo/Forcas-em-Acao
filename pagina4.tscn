@@ -1,0 +1,295 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://seta.gd" id="1_seta"]
+[ext_resource type="Script" path="res://pagina4.gd" id="2_pagina4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.03529, 0.05098, 0.15294, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.23137, 0.29020, 0.60392, 1.000)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+bg_color = Color(1.00000, 0.54118, 0.23922, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1.00000, 0.76078, 0.47843, 1.000)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+bg_color = Color(0.08627, 0.10980, 0.29020, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.29412, 0.35686, 0.81569, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+bg_color = Color(0.12941, 0.16471, 0.41961, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.43529, 0.49804, 0.90980, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5"]
+bg_color = Color(0.18431, 0.22745, 0.56078, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.56078, 0.61176, 1.00000, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[node name="Pagina4" type="Node2D"]
+script = ExtResource("2_pagina4")
+pagina_anterior = "res://pagina3.tscn"
+pagina_proxima = "res://pagina1.tscn"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Fundo" type="ColorRect" parent="CanvasLayer/Interface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.16471, 0.05490, 0.29020, 1.000)
+
+[node name="Cartao" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 48
+offset_top = 109
+offset_right = 720
+offset_bottom = 597
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="Titulo" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 48
+offset_top = 143
+offset_right = 720
+offset_bottom = 218
+mouse_filter = 2
+text = "Forças em Ação"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.43137, 0.78431, 0.94118, 1.000)
+theme_override_font_sizes/font_size = 55
+
+[node name="Subtitulo" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 96
+offset_top = 228
+offset_right = 672
+offset_bottom = 318
+mouse_filter = 2
+text = "peso, força normal, atrito e leis de Newton"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 32
+
+[node name="Autora" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 48
+offset_top = 339
+offset_right = 720
+offset_bottom = 382
+mouse_filter = 2
+text = "Raquel de Lima Cavalcanti"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 32
+
+[node name="Semestre" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 48
+offset_top = 410
+offset_right = 720
+offset_bottom = 446
+mouse_filter = 2
+text = "Ano e semestre: 2026.2"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="Orientador" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 48
+offset_top = 448
+offset_right = 720
+offset_bottom = 484
+mouse_filter = 2
+text = "Orientador: Prof. Ewerton Mendonça"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="Disciplina" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 96
+offset_top = 486
+offset_right = 672
+offset_bottom = 561
+mouse_filter = 2
+text = "Disciplina: Computação Gráfica e Sistemas Multimídia"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="IconeChao" type="ColorRect" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 280
+offset_top = 746
+offset_right = 488
+offset_bottom = 749
+mouse_filter = 2
+color = Color(0.18431, 0.33333, 0.83137, 1.000)
+
+[node name="IconeBloco" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 345
+offset_top = 690
+offset_right = 423
+offset_bottom = 746
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2")
+
+[node name="IconeSetaN" type="Control" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 384
+offset_top = 690
+offset_right = 395
+offset_bottom = 701
+mouse_filter = 2
+cor = Color(0.11373, 0.94118, 0.70588, 1.000)
+direcao = Vector2(0, -1)
+comp = 66.6
+espessura = 8.3
+cabeca = 30.5
+script = ExtResource("1_seta")
+
+[node name="IconeSetaP" type="Control" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 384
+offset_top = 750
+offset_right = 395
+offset_bottom = 761
+mouse_filter = 2
+cor = Color(1.00000, 0.30196, 0.42745, 1.000)
+direcao = Vector2(0, 1)
+comp = 66.6
+espessura = 8.3
+cabeca = 30.5
+script = ExtResource("1_seta")
+
+[node name="Numero" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 331
+offset_top = 896
+offset_right = 437
+offset_bottom = 932
+mouse_filter = 2
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.68235, 0.72157, 0.90980, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="BtnVoltar" type="Button" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 15
+offset_top = 943
+offset_right = 252
+offset_bottom = 1007
+focus_mode = 0
+text = "Página anterior"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5")
+
+[node name="BtnOuvir" type="Button" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 266
+offset_top = 943
+offset_right = 502
+offset_bottom = 1007
+focus_mode = 0
+text = "Ouvir texto"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5")
+
+[node name="BtnAvancar" type="Button" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 516
+offset_top = 943
+offset_right = 753
+offset_bottom = 1007
+focus_mode = 0
+text = "Voltar ao início"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5")
+
+[connection signal="pressed" from="CanvasLayer/Interface/BtnVoltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnOuvir" to="." method="_on_ouvir_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnAvancar" to="." method="_on_avancar_pressed"]

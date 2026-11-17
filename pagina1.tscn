@@ -1,0 +1,420 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://seta.gd" id="1_seta"]
+[ext_resource type="Script" path="res://circulo.gd" id="2_circulo"]
+[ext_resource type="Script" path="res://pagina1.gd" id="3_pagina1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(1.00000, 0.54118, 0.23922, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1.00000, 0.76078, 0.47843, 1.000)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+bg_color = Color(0.03529, 0.05098, 0.15294, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.23137, 0.29020, 0.60392, 1.000)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+bg_color = Color(0.08627, 0.10980, 0.29020, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.29412, 0.35686, 0.81569, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+bg_color = Color(0.12941, 0.16471, 0.41961, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.43529, 0.49804, 0.90980, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5"]
+bg_color = Color(0.18431, 0.22745, 0.56078, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.56078, 0.61176, 1.00000, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="Animation" id="Animation_balancar"]
+resource_name = "balancar"
+length = 1.22
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Interface/Bloco:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -14.0, 11.0, -8.0, 5.0, -2.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Interface/Efeitos:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.72, 1.22),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Interface/CirculoDica:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.22),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1"]
+_data = {
+&"balancar": SubResource("Animation_balancar")
+}
+
+[node name="Pagina1" type="Node2D"]
+script = ExtResource("3_pagina1")
+pagina_proxima = "res://pagina2.tscn"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Fundo" type="ColorRect" parent="CanvasLayer/Interface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.16471, 0.05490, 0.29020, 1.000)
+
+[node name="IconeChao" type="ColorRect" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 562
+offset_top = 140
+offset_right = 722
+offset_bottom = 143
+mouse_filter = 2
+color = Color(0.18431, 0.33333, 0.83137, 1.000)
+
+[node name="IconeBloco" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 612
+offset_top = 97
+offset_right = 672
+offset_bottom = 140
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="IconeSetaN" type="Control" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 642
+offset_top = 97
+offset_right = 653
+offset_bottom = 108
+mouse_filter = 2
+cor = Color(0.11373, 0.94118, 0.70588, 1.000)
+direcao = Vector2(0, -1)
+comp = 51.2
+espessura = 6.4
+cabeca = 23.5
+script = ExtResource("1_seta")
+
+[node name="IconeSetaP" type="Control" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 642
+offset_top = 144
+offset_right = 653
+offset_bottom = 155
+mouse_filter = 2
+cor = Color(1.00000, 0.30196, 0.42745, 1.000)
+direcao = Vector2(0, 1)
+comp = 51.2
+espessura = 6.4
+cabeca = 23.5
+script = ExtResource("1_seta")
+
+[node name="Cartao" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 53
+offset_top = 249
+offset_right = 715
+offset_bottom = 658
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2")
+
+[node name="Titulo" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 53
+offset_top = 288
+offset_right = 715
+offset_bottom = 363
+mouse_filter = 2
+text = "Forças em Ação"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.43137, 0.78431, 0.94118, 1.000)
+theme_override_font_sizes/font_size = 55
+
+[node name="Subtitulo" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 101
+offset_top = 371
+offset_right = 667
+offset_bottom = 461
+mouse_filter = 2
+text = "peso, força normal, atrito e leis de Newton"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 32
+
+[node name="Autora" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 53
+offset_top = 499
+offset_right = 715
+offset_bottom = 542
+mouse_filter = 2
+text = "Raquel de Lima Cavalcanti"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 29
+
+[node name="Semestre" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 53
+offset_top = 540
+offset_right = 715
+offset_bottom = 576
+mouse_filter = 2
+text = "2026.2"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="Instrucao" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 53
+offset_top = 589
+offset_right = 715
+offset_bottom = 636
+mouse_filter = 2
+text = "Toque no bloco para ele balançar"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(1.00000, 0.82745, 0.23922, 1.000)
+theme_override_font_sizes/font_size = 29
+
+[node name="Piso" type="ColorRect" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 64
+offset_top = 842
+offset_right = 704
+offset_bottom = 845
+mouse_filter = 2
+color = Color(0.18431, 0.33333, 0.83137, 1.000)
+
+[node name="CirculoDica" type="Control" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 300.8
+offset_top = 711.47
+offset_right = 467.2
+offset_bottom = 877.87
+mouse_filter = 2
+raio = 83.2
+preenchimento = Color(0, 0, 0, 0)
+cor_borda = Color(0.96078, 0.78431, 0.25882, 1.000)
+largura = 4.27
+tracejado = true
+script = ExtResource("2_circulo")
+
+[node name="Bloco" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 325
+offset_top = 747
+offset_right = 443
+offset_bottom = 842
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+pivot_offset = Vector2(58.67, 94.93)
+
+[node name="Efeitos" type="Control" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 768
+offset_bottom = 1024
+mouse_filter = 2
+modulate = Color(1, 1, 1, 0)
+
+[node name="ArcoEsquerdo" type="Line2D" parent="CanvasLayer/Interface/Efeitos"]
+points = PackedVector2Array(273.232, 839.42, 270.597, 832.244, 268.426, 824.915, 266.729, 817.462, 265.51, 809.916, 264.778, 802.307, 264.533, 794.667, 264.778, 787.026, 265.51, 779.418, 266.729, 771.871, 268.426, 764.418, 270.597, 757.089, 273.232, 749.914)
+width = 5
+default_color = Color(0.96078, 0.78431, 0.25882, 1.000)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="ArcoDireito" type="Line2D" parent="CanvasLayer/Interface/Efeitos"]
+points = PackedVector2Array(494.768, 749.914, 497.403, 757.089, 499.574, 764.418, 501.271, 771.871, 502.49, 779.418, 503.222, 787.026, 503.467, 794.667, 503.222, 802.307, 502.49, 809.916, 501.271, 817.462, 499.574, 824.915, 497.403, 832.244, 494.768, 839.42)
+width = 5
+default_color = Color(0.96078, 0.78431, 0.25882, 1.000)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Poeira1" type="Control" parent="CanvasLayer/Interface/Efeitos"]
+layout_mode = 0
+offset_left = 309.33
+offset_top = 832
+offset_right = 322.13
+offset_bottom = 844.8
+mouse_filter = 2
+raio = 6.4
+preenchimento = Color(0.54118, 0.56078, 0.81569, 1.000)
+cor_borda = Color(0.54118, 0.56078, 0.81569, 1.000)
+largura = 1.07
+script = ExtResource("2_circulo")
+
+[node name="Poeira2" type="Control" parent="CanvasLayer/Interface/Efeitos"]
+layout_mode = 0
+offset_left = 448
+offset_top = 832
+offset_right = 460.8
+offset_bottom = 844.8
+mouse_filter = 2
+raio = 6.4
+preenchimento = Color(0.54118, 0.56078, 0.81569, 1.000)
+cor_borda = Color(0.54118, 0.56078, 0.81569, 1.000)
+largura = 1.07
+script = ExtResource("2_circulo")
+
+[node name="Poeira3" type="Control" parent="CanvasLayer/Interface/Efeitos"]
+layout_mode = 0
+offset_left = 294.4
+offset_top = 827.73
+offset_right = 302.93
+offset_bottom = 836.27
+mouse_filter = 2
+raio = 4.27
+preenchimento = Color(0.54118, 0.56078, 0.81569, 1.000)
+cor_borda = Color(0.54118, 0.56078, 0.81569, 1.000)
+largura = 1.07
+script = ExtResource("2_circulo")
+
+[node name="AreaToque" type="Button" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 272
+offset_top = 693
+offset_right = 496
+offset_bottom = 853
+focus_mode = 0
+flat = true
+
+[node name="Numero" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 331
+offset_top = 896
+offset_right = 437
+offset_bottom = 932
+mouse_filter = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.68235, 0.72157, 0.90980, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="BtnOuvir" type="Button" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 266
+offset_top = 943
+offset_right = 502
+offset_bottom = 1007
+focus_mode = 0
+text = "Ouvir texto"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5")
+
+[node name="BtnAvancar" type="Button" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 516
+offset_top = 943
+offset_right = 753
+offset_bottom = 1007
+focus_mode = 0
+text = "Próxima página"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1")
+}
+
+[connection signal="pressed" from="CanvasLayer/Interface/AreaToque" to="." method="_on_bloco_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnOuvir" to="." method="_on_ouvir_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnAvancar" to="." method="_on_avancar_pressed"]

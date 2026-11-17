@@ -1,0 +1,576 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://circulo.gd" id="1_circulo"]
+[ext_resource type="Script" path="res://seta.gd" id="2_seta"]
+[ext_resource type="Texture2D" path="res://assets/balanca_sheet.png" id="3_balanca_sheet"]
+[ext_resource type="Script" path="res://pagina2.gd" id="4_pagina2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.03529, 0.05098, 0.15294, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.23137, 0.29020, 0.60392, 1.000)
+corner_radius_top_left = 23
+corner_radius_top_right = 23
+corner_radius_bottom_right = 23
+corner_radius_bottom_left = 23
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+bg_color = Color(0.08627, 0.10980, 0.29020, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.29412, 0.35686, 0.81569, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+bg_color = Color(0.12941, 0.16471, 0.41961, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.43529, 0.49804, 0.90980, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+bg_color = Color(0.18431, 0.22745, 0.56078, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.56078, 0.61176, 1.00000, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5"]
+bg_color = Color(0.16471, 0.13333, 0.03137, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1.00000, 0.82745, 0.23922, 1.000)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6"]
+bg_color = Color(0.04314, 0.06275, 0.20000, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.23137, 0.29020, 0.60392, 1.000)
+corner_radius_top_left = 23
+corner_radius_top_right = 23
+corner_radius_bottom_right = 23
+corner_radius_bottom_left = 23
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7"]
+bg_color = Color(0.05098, 0.07843, 0.21961, 1.000)
+corner_radius_bottom_right = 21
+corner_radius_bottom_left = 21
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8"]
+bg_color = Color(0.23137, 0.29020, 0.60392, 1.000)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.43137, 0.78431, 0.94118, 1.000)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_9"]
+bg_color = Color(0.05882, 0.10196, 0.29020, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.29412, 0.35686, 0.81569, 1.000)
+corner_radius_top_left = 23
+corner_radius_top_right = 23
+corner_radius_bottom_right = 23
+corner_radius_bottom_left = 23
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10"]
+bg_color = Color(0.05882, 0.10196, 0.29020, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.29412, 0.35686, 0.81569, 1.000)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11"]
+bg_color = Color(1.00000, 0.54118, 0.23922, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1.00000, 0.76078, 0.47843, 1.000)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[node name="Pagina2" type="Node2D"]
+script = ExtResource("4_pagina2")
+pagina_anterior = "res://pagina1.tscn"
+pagina_proxima = "res://pagina3.tscn"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Fundo" type="ColorRect" parent="CanvasLayer/Interface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.16471, 0.05490, 0.29020, 1.000)
+
+[node name="CartaoTexto" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 15
+offset_top = 15
+offset_right = 753
+offset_bottom = 503
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="Titulo" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 34
+offset_top = 26
+offset_right = 567
+offset_bottom = 85
+mouse_filter = 2
+text = "Peso e força normal"
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.43137, 0.78431, 0.94118, 1.000)
+theme_override_font_sizes/font_size = 36
+
+[node name="Texto" type="RichTextLabel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 34
+offset_top = 92
+offset_right = 734
+offset_bottom = 386
+mouse_filter = 2
+bbcode_enabled = true
+text = "A [b]força gravitacional[/b] é a atração que a Terra exerce sobre os objetos. Perto da superfície, essa força é o [b]peso[/b]: [b]P = m · g[/b], com g ≈ 9,8 m/s². A [b]massa[/b] mede a quantidade de matéria e não muda; o peso depende da gravidade.\n\nA [b]força normal (N)[/b] é a força que a superfície faz sobre o objeto, perpendicular a ela. Em um bloco parado no piso horizontal, [b]N = P[/b], com sentido oposto. Em uma rampa, N e P podem ser diferentes. (HEWITT, 2015)"
+scroll_active = false
+theme_override_colors/default_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/normal_font_size = 21
+theme_override_font_sizes/bold_font_size = 21
+
+[node name="CaixaInstrucao" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 32
+offset_top = 397
+offset_right = 736
+offset_bottom = 489
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5")
+
+[node name="Instrucao" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 47
+offset_top = 401
+offset_right = 721
+offset_bottom = 484
+mouse_filter = 2
+text = "Instruções: Faça o movimento de pinça na tela para aumentar ou diminuir a massa do bloco e observe as setas do peso e da força normal."
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(1.00000, 0.82745, 0.23922, 1.000)
+theme_override_font_sizes/font_size = 19
+
+[node name="AreaSimulacao" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 15
+offset_top = 518
+offset_right = 753
+offset_bottom = 907
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6")
+
+[node name="PisoFundo" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 18
+offset_top = 836
+offset_right = 750
+offset_bottom = 903
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7")
+
+[node name="Prato" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 156
+offset_top = 821
+offset_right = 412
+offset_bottom = 836
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8")
+
+[node name="EtiquetaMassa" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 36
+offset_top = 538
+offset_right = 203
+offset_bottom = 585
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_9")
+
+[node name="RotMassa" type="Label" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 36
+offset_top = 538
+offset_right = 203
+offset_bottom = 585
+mouse_filter = 2
+text = "massa: 2 kg"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+
+[node name="Dica" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 224
+offset_top = 538
+offset_right = 533
+offset_bottom = 585
+mouse_filter = 2
+text = "Abra e feche os dedos"
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="CaixaValores" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 544
+offset_top = 535
+offset_right = 738
+offset_bottom = 631
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_10")
+
+[node name="RotValorP" type="Label" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 544
+offset_top = 540
+offset_right = 738
+offset_bottom = 582
+mouse_filter = 2
+text = "P = 19,6 N"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(1.00000, 0.30196, 0.42745, 1.000)
+theme_override_font_sizes/font_size = 27
+
+[node name="RotValorN" type="Label" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 544
+offset_top = 582
+offset_right = 738
+offset_bottom = 625
+mouse_filter = 2
+text = "N = 19,6 N"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.11373, 0.94118, 0.70588, 1.000)
+theme_override_font_sizes/font_size = 27
+
+[node name="DedoA" type="Control" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 204.8
+offset_top = 618.67
+offset_right = 256
+offset_bottom = 669.87
+mouse_filter = 2
+raio = 25.6
+preenchimento = Color(0.12157, 0.24706, 0.56078, 1.000)
+cor_borda = Color(0.30980, 0.81961, 1.00000, 1.000)
+largura = 3.2
+script = ExtResource("1_circulo")
+
+[node name="DedoB" type="Control" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 311.47
+offset_top = 618.67
+offset_right = 362.67
+offset_bottom = 669.87
+mouse_filter = 2
+raio = 25.6
+preenchimento = Color(0.12157, 0.24706, 0.56078, 1.000)
+cor_borda = Color(0.30980, 0.81961, 1.00000, 1.000)
+largura = 3.2
+script = ExtResource("1_circulo")
+
+[node name="SetaDedoA" type="Control" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 196
+offset_top = 644
+offset_right = 207
+offset_bottom = 655
+mouse_filter = 2
+cor = Color(0.30980, 0.81961, 1.00000, 1.000)
+direcao = Vector2(-1, 0)
+comp = 42.7
+espessura = 4.3
+cabeca = 17.1
+script = ExtResource("2_seta")
+
+[node name="SetaDedoB" type="Control" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 371
+offset_top = 644
+offset_right = 382
+offset_bottom = 655
+mouse_filter = 2
+cor = Color(0.30980, 0.81961, 1.00000, 1.000)
+direcao = Vector2(1, 0)
+comp = 42.7
+espessura = 4.3
+cabeca = 17.1
+script = ExtResource("2_seta")
+
+[node name="Bloco" type="Panel" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 220
+offset_top = 751
+offset_right = 348
+offset_bottom = 821
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_11")
+
+[node name="RotBloco" type="Label" parent="CanvasLayer/Interface/Bloco"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "2 kg"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.16471, 0.07843, 0.00000, 1.000)
+theme_override_font_sizes/font_size = 29
+
+[node name="SetaN" type="Control" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 284
+offset_top = 751
+offset_right = 294
+offset_bottom = 762
+mouse_filter = 2
+cor = Color(0.11373, 0.94118, 0.70588, 1.000)
+direcao = Vector2(0, -1)
+comp = 57.6
+espessura = 8.5
+cabeca = 32
+script = ExtResource("2_seta")
+
+[node name="SetaP" type="Control" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 284
+offset_top = 821
+offset_right = 294
+offset_bottom = 832
+mouse_filter = 2
+cor = Color(1.00000, 0.30196, 0.42745, 1.000)
+direcao = Vector2(0, 1)
+comp = 57.6
+espessura = 8.5
+cabeca = 32
+script = ExtResource("2_seta")
+
+[node name="RotN" type="Label" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 301
+offset_top = 705
+offset_right = 343
+offset_bottom = 739
+mouse_filter = 2
+text = "N"
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.11373, 0.94118, 0.70588, 1.000)
+theme_override_font_sizes/font_size = 29
+
+[node name="RotP" type="Label" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 301
+offset_top = 833
+offset_right = 343
+offset_bottom = 867
+mouse_filter = 2
+text = "P"
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(1.00000, 0.30196, 0.42745, 1.000)
+theme_override_font_sizes/font_size = 29
+
+[node name="Balanca" type="Sprite2D" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+position = Vector2(492.8, 689.07)
+scale = Vector2(1.06667, 1.06667)
+texture = ExtResource("3_balanca_sheet")
+centered = false
+hframes = 6
+frame = 2
+
+[node name="Balanca0" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 493
+offset_top = 821
+offset_right = 557
+offset_bottom = 851
+mouse_filter = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.68235, 0.72157, 0.90980, 1.000)
+theme_override_font_sizes/font_size = 21
+
+[node name="Balanca50" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 685
+offset_top = 821
+offset_right = 749
+offset_bottom = 851
+mouse_filter = 2
+text = "50 N"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.68235, 0.72157, 0.90980, 1.000)
+theme_override_font_sizes/font_size = 21
+
+[node name="BalancaNome" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 567
+offset_top = 826
+offset_right = 674
+offset_bottom = 855
+mouse_filter = 2
+text = "balança"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.68235, 0.72157, 0.90980, 1.000)
+theme_override_font_sizes/font_size = 21
+
+[node name="Numero" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 331
+offset_top = 896
+offset_right = 437
+offset_bottom = 932
+mouse_filter = 2
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.68235, 0.72157, 0.90980, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="BtnVoltar" type="Button" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 15
+offset_top = 943
+offset_right = 252
+offset_bottom = 1007
+focus_mode = 0
+text = "Página anterior"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4")
+
+[node name="BtnOuvir" type="Button" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 266
+offset_top = 943
+offset_right = 502
+offset_bottom = 1007
+focus_mode = 0
+text = "Ouvir texto"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4")
+
+[node name="BtnAvancar" type="Button" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 516
+offset_top = 943
+offset_right = 753
+offset_bottom = 1007
+focus_mode = 0
+text = "Próxima página"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4")
+
+[connection signal="pressed" from="CanvasLayer/Interface/BtnVoltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnOuvir" to="." method="_on_ouvir_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnAvancar" to="." method="_on_avancar_pressed"]

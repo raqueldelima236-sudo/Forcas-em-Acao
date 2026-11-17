@@ -1,0 +1,179 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://pagina3.gd" id="1_pagina3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.03529, 0.05098, 0.15294, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.23137, 0.29020, 0.60392, 1.000)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+bg_color = Color(0.08627, 0.10980, 0.29020, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.29412, 0.35686, 0.81569, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+bg_color = Color(0.12941, 0.16471, 0.41961, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.43529, 0.49804, 0.90980, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+bg_color = Color(0.18431, 0.22745, 0.56078, 1.000)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.56078, 0.61176, 1.00000, 1.000)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[node name="Pagina3" type="Node2D"]
+script = ExtResource("1_pagina3")
+pagina_anterior = "res://pagina2.tscn"
+pagina_proxima = "res://pagina4.tscn"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Fundo" type="ColorRect" parent="CanvasLayer/Interface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.16471, 0.05490, 0.29020, 1.000)
+
+[node name="Cartao" type="Panel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 26
+offset_top = 43
+offset_right = 742
+offset_bottom = 885
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="Titulo" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 26
+offset_top = 58
+offset_right = 742
+offset_bottom = 122
+mouse_filter = 2
+text = "Referências"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.43137, 0.78431, 0.94118, 1.000)
+theme_override_font_sizes/font_size = 44
+
+[node name="Texto" type="RichTextLabel" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 51
+offset_top = 132
+offset_right = 717
+offset_bottom = 875
+bbcode_enabled = true
+text = "HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. [b]Fundamentos de física[/b]: mecânica. 10. ed. Rio de Janeiro: LTC, 2016. v. 1. Disponível em: [url=https://archive.org/details/halliday-resnick-walker-fundamentos-de-fisica-decima-edicao-volume-1-mecanica/page/n13/mode/2up]https://archive.org/details/halliday-resnick-walker-fundamentos-de-fisica-decima-edicao-volume-1-mecanica/page/n13/mode/2up[/url]. Acesso em: 1 nov. 2026.\n\nHEWITT, Paul G. [b]Física conceitual[/b]. 12. ed. Porto Alegre: Bookman, 2015. Disponível em: [url=https://books.google.com.br/books?id=QgKbCgAAQBAJ&printsec=frontcover&hl=pt-BR&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false]https://books.google.com.br/books?id=QgKbCgAAQBAJ&printsec=frontcover&hl=pt-BR&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false[/url]. Acesso em: 1 nov. 2026.\n\nMONTEIRO, Marco Aurélio Alvarenga; MONTEIRO, Isabel Cristina de Castro; GASPAR, Alberto. Abordagem experimental da força de atrito em aulas de Física do Ensino Médio. [b]Caderno Brasileiro de Ensino de Física[/b], Florianópolis, v. 29, n. 3, p. 1121-1136, dez. 2012. DOI: [url=https://doi.org/10.5007/2175-7941.2012v29n3p1121]https://doi.org/10.5007/2175-7941.2012v29n3p1121[/url]. Disponível em: [url=https://periodicos.ufsc.br/index.php/fisica/article/view/2175-7941.2012v29n3p1121/0]https://periodicos.ufsc.br/index.php/fisica/article/view/2175-7941.2012v29n3p1121/0[/url]. Acesso em: 1 nov. 2026.\n\nSILVA, Ana Paula Teixeira Bruno; BASTOS, Heloisa Flora Brasil Nóbrega. Investigando as concepções de força em situações do cotidiano ao longo do ciclo da experiência Kellyana. [b]Caderno Brasileiro de Ensino de Física[/b], Florianópolis, v. 25, n. 2, p. 287-309, ago. 2008. DOI: [url=https://doi.org/10.5007/2175-7941.2008v25n2p287]https://doi.org/10.5007/2175-7941.2008v25n2p287[/url]. Disponível em: [url=https://periodicos.ufsc.br/index.php/fisica/article/view/2175-7941.2008v25n2p287]https://periodicos.ufsc.br/index.php/fisica/article/view/2175-7941.2008v25n2p287[/url]. Acesso em: 1 nov. 2026."
+theme_override_colors/default_color = Color(0.90980, 0.92549, 1.00000, 1.000)
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 18
+
+[node name="Numero" type="Label" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 331
+offset_top = 896
+offset_right = 437
+offset_bottom = 932
+mouse_filter = 2
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.68235, 0.72157, 0.90980, 1.000)
+theme_override_font_sizes/font_size = 25
+
+[node name="BtnVoltar" type="Button" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 15
+offset_top = 943
+offset_right = 252
+offset_bottom = 1007
+focus_mode = 0
+text = "Página anterior"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4")
+
+[node name="BtnOuvir" type="Button" parent="CanvasLayer/Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 266
+offset_top = 943
+offset_right = 502
+offset_bottom = 1007
+focus_mode = 0
+text = "Ouvir texto"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4")
+
+[node name="BtnAvancar" type="Button" parent="CanvasLayer/Interface"]
+layout_mode = 0
+offset_left = 516
+offset_top = 943
+offset_right = 753
+offset_bottom = 1007
+focus_mode = 0
+text = "Próxima página"
+theme_override_colors/font_color = Color(0.86275, 0.88627, 1.00000, 1.000)
+theme_override_colors/font_hover_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_colors/font_pressed_color = Color(1.00000, 1.00000, 1.00000, 1.000)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4")
+
+[connection signal="meta_clicked" from="CanvasLayer/Interface/Texto" to="." method="_on_texto_meta_clicked"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnVoltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnOuvir" to="." method="_on_ouvir_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interface/BtnAvancar" to="." method="_on_avancar_pressed"]
